@@ -1,0 +1,195 @@
+:root {
+    --bg-color: #104f3e;
+    --surface: #0d7e48;
+    --ink: #90b13e;
+    --muted: #d7b595;
+    --accent: #7b4635;
+    --accent-ink: #FFFFFF;
+    --line: #d6cdb4;
+
+
+    --spine1: #7e9170;
+    --spine2: #8a5a3c;
+    --spine3: #c9b98f;
+    --spine4: #4f6444;
+}
+
+
+
+* {box-sizing: border-box;}
+html {scroll-behavior: smooth; scroll-padding-top: 80px;}
+body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--ink);
+    font: 400 1.0rem/1.65 "DM Sans", sans-serif;
+    transition: background .4s, color .4s;
+}
+
+.site-header {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    padding: .8rem 5vw; background: var(--bg); border-bottom: 1px solid var(--line);
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink); 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+nav a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: .2rem 0;
+    border-bottom: 2px solid transparent
+}
+
+nav a:hover {
+    border-color: var(--accent); 
+}
+
+
+
+/*---buttons---*/
+
+.btn {
+    display: inline-block; 
+    cursor: pointer;
+    text-decoration: none;
+    font: 700 1rem "DM Sans", sans-serif;
+    padding: .75rem 1.5rem; 
+    border-radius: 8px; 
+    border: 2px solid var(--accent);
+    background: var(--accent);
+    color: var(--accent-ink);
+}
+
+.btn:hover {
+    filter: brightness(1.08);
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--ink);
+}
+
+.actions {
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/*------heroooo------*/
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 3rem;
+    align-items: end;
+    padding: 5rem 5vw 0;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    padding-bottom: 4rem;
+}
+
+.hero-text {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 65px);
+  background: linear-gradient(
+      rgba(26, 30, 58, 0.45), 
+      rgba(26, 30, 58, 0.60)
+    ), 
+    url('https://resurfacetoreality.com/2020/08/30/osu-no-mori-cafe-kodama-the-gateway-to-ghibli-paradise/') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.shelf {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 0 1.2rem;
+    border-bottom: 14px solid var(--ink); 
+    min-height: 300px;
+}
+
+.shelf span {
+    width: 38px;
+    height: var(--h);
+    background: var(--c);
+    border-radius: 4px 4px 0 0;
+    box-shadow: insent -6px 0 0 rgba (0,0,0,.12), inset 0 14px 0 rgba(0,0,0,0)
+}
+
+/*-----sectionns-----*/
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 5vw;
+}
+
+.wrap.narrow {
+    max-width: 760px;
+}
+
+.chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    padding: 0;
+    margin-top: 1.5rems
+}
+
+
+/*
+
+.nav-header {
+    background-color: #104F3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-parent {
+    display: flex;
+    align-items:baseline;
+    gap: 16px;
+}
+
+.logo-child {
+    display: flex;
+    align-items: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    text-decoration: underline;
+    color: #7b4635;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+*/
