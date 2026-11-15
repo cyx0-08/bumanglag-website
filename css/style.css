@@ -500,11 +500,12 @@ input, select, textarea {
         padding-top: 3rem;
         min-height: auto;
     }
+
     .hero-text {
         padding-bottom: 1rem;
     }
     .order {
-        position: static
+        position: static;
     }
     .form {
         grid-template-columns: 1fr;
