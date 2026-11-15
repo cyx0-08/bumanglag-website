@@ -306,16 +306,46 @@ nav a:hover {
 .order {
     position: sticky;
     top: 90px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.4rem;
     
+}
+
+.order ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 .8rem;
+}
+
+.order li {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: .3rem 0;
+}
+
+.order li.empty {
+    color: var(--muted);
+}
+
+.order li button {
+    background: none; 
+    border: 0;
+    color: var(--muted);
+    cursor: pointer;
+    text-decoration: underline;
+    font: inherit;
+}
+
+.total {
+    margin: .4rem 0 1rem;
 }
 
 
 
-
-
-
-
-
+/*-----formss------*/
 
 /*
 
