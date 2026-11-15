@@ -388,15 +388,143 @@ input, select, textarea {
 
 /*------books!--------*/
 
+.search {
+    max-width: 480px;
+    margin-bottom: 1.5rem;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax( 200px, 1fr));
+    gap: 1.2 rem
+}
+
+.book {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover {
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    padding: .7rem;
+    background: var(--c);
+    color: #FFFFFF;
+    font: 700 1rem "Fraunces", serif;
+    line-height: 1.2;
+    text-shadow: 0 1px 3 px rgba(0,0,0,0);
+
+}
+
+.book div.info {
+    padding: .9rem;
+
+}
+
+.book h3 {
+    font-size: 1rem;
+    margin: 0 0 .1rem;
+}
+
+.book p {
+    margin: 0;
+    font-size: 9rem;
+    color: var(--muted);
+}
+
+.stock {
+    display: inline-block;
+    margin-top: .6rem;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+/*.stock.in::before {
+    content: 
+} */
 
 
+/*-----events-----*/
 
+.events {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+}
 
+.events li {
+    display: grid;
+    grid-template-columns:90px 1fr;
+    gap: 1.2rem;
+    padding: 1.1rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12plx;
+}
 
+.date {
+    text-align: center;
+    font-family: "Fraunces", serif;
+    line-height: 1;
+}
 
+.date b {
+    dislpay: block;
+    font-size: 2.2rem;
+    color: var(--accent);
+}
 
+.events h3{
+    margin: 0 0 .2rem;
+}
 
+.events p {
+    margin: 0;
+    color: var(--muted);
+}
 
+/*-----response part-------*/
+
+@media (max-width: 800px) {
+    .hero, .split {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        padding-top: 3rem;
+        min-height: auto;
+    }
+    .hero-text {
+        padding-bottom: 1rem;
+    }
+    .order {
+        position: static
+    }
+    .form {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        margin-left: 0;
+        width: 100%;
+        order: 3;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .cup i {
+        animation: none;
+    }
+}
 
 
 
