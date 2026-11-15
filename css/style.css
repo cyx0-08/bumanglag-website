@@ -109,6 +109,7 @@ nav a:hover {
     padding-bottom: 4rem;
 }
 
+/*
 .hero-text {
   position: relative;
   width: 100%;
@@ -122,7 +123,7 @@ nav a:hover {
   align-items: center;
   padding: 0 80px;
 }
-
+*/
 .shelf {
     position: relative;
     display: flex;
@@ -139,7 +140,62 @@ nav a:hover {
     background: var(--c);
     border-radius: 4px 4px 0 0;
     box-shadow: insent -6px 0 0 rgba (0,0,0,.12), inset 0 14px 0 rgba(0,0,0,0)
+
 }
+
+.shelf .lean {
+    transform: rotate(9deg);
+    transform-origin: bottom left;
+    margin-left: 8px;
+}
+
+.cup {
+    position: relative;
+    width: 70px;
+    height: 56px;
+    margin-left: 18px;
+    background: var(--surface);
+    border: 3px solid var(--ink);
+    border-radius: 0 0 30px 30px;
+}
+
+.cup::after {
+    content: "";
+    position: aboslute;
+    right: -22px;
+    top: 8px;
+    width: 22px;
+    height: 24px;
+    border: 3px solid var(--ink); 
+    border-left: 0;
+    border-radius: 0 14px 14px 0;
+}
+
+.cup i {
+    position: abosulte;
+    left: 50%;
+    top: -34px;
+    width: 8px;
+    height: 26px;
+    border-radius: 8px;
+    background: var(--muted);
+    opacity: .5;
+    animation: steam 3.2s ease-in-out infinite;
+}
+
+@keyframes steam {
+    0%, 100%
+    { 
+        transform: translateY(6px) scaleY(.6);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-6px) scaleY(1);
+        opacity: .5; 
+    }
+}
+
 
 /*-----sectionns-----*/
 
@@ -161,6 +217,104 @@ nav a:hover {
     padding: 0;
     margin-top: 1.5rems
 }
+
+.chips li {
+    padding: .35rem .9rem;
+    border: 1.5px solid var(--accent);
+    border-radius: 999px;
+}
+
+.filters {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.filters button {
+    font: 500 .95rem "DM Sans", san-serif;
+    cursor: pointer;
+    padding: .4rem 1rem;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--accent);
+}
+
+.filters button.on {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 2rem;
+    align-items: start;
+
+}
+
+.menu-list {
+    display: grid;
+    gap: 0;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .2rem 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--line);
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .95rem;
+    grid-column: 1;
+}
+
+.item .price {
+    font-weight: 700px;
+}
+
+.item button {
+    grid-column: 2;
+    grid-row: 2;
+    cursor: pointer;
+    font: 700 .85rem "DM Sans", sans-serif;
+    padding: .3rem .8rem;
+    border-radius: 6px;
+    background: transparent; 
+    color: var(--ink); border: 1.5px solid var(--accent);
+}
+
+.item button:hover {
+    background: var(--accent);
+    color: var(--surface);
+    
+}
+
+.order {
+    position: sticky;
+    top: 90px;
+    
+}
+
+
+
+
+
+
+
 
 
 /*
