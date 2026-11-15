@@ -1,19 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel= "stylesheet" href= "style.css">
-    <html lang="en"></html>
+    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"\>
+    
     <title>Aetheria; BookCafe</title>
+
+    <link rel="preconnect" href="googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheets">
+
+    <link rel= "stylesheet" href= "css/style.css">
+
 </head>
 
 <body>
-    <header class = "header">
+    <header class = "site-header">
         <h1>Aetheria; BookCafe</h1>
-        <img src="bookcafe.jpg" alt="Aetheria Logo" class="logo">
+        <!--<img src="bookcafe.jpg" alt="Aetheria Logo" class="logo">-->
+        <a href="#home" class="logo">Aetheria<small>BookCafe</small></a>
 
-        <nav>
+        <nav aria-label="Main Nav">
             <a href= "#home">Home</a>
             <a href= "#aboutus">About Us</a>
             <a href= "#menu">Menu</a>
@@ -21,21 +30,41 @@
             <a href= "#events">Events</a>
             <a href= "#contact">Contact Us</a>
         </nav>
+
+        <div class="themes" role="group" aria-label="color palette">        
     </header>
 
     <main>
         <!--Hero Section-->
         <section id="home" class="hero">
-            <div class="here-text">
-                <h2>Welcome to Aetheria. Books, cafe, and a seat saved just for you!</h2>
+            <div class="hero-text">
+                <h1>Welcome to Aetheria. Books, cafe, and a seat saved just for you!</h1>
                 <p> Aetheria; BookCafe is a cozy haven for book lovers and coffee enthusiasts alike. Whether you're looking to dive into a new novel, enjoy a cup of freshly brewed coffee, or simply relax in a welcoming atmosphere, Aetheria has something for everyone.</p>
-        </div>            
+                
+                <div class="actions">
+                    <a class="btn" href="#reserve">Reserve a table</a>
+                    <a class="btn ghost" href="#menu">See Menu</a>
+                </div>
+            </div>
+            <div class="shelf" aria-hidden="true">
+                <span style="--h:210px; --c:var(--spine1)"></span><span style="--h:250px;--c:var(--spine2)"></span>"
+                <span style="--h:190px;--c:var(--spine3)"></span><span style=" --h:270px;--c:var(--spine1)"></span>"
+                <span style="--h:230px;--c:var(--spine4)"></span><span style="--h:200px;--c:var(--spine2)"></span>"
+                <span style="--h:260px;--c:var(--spine3)"><span><span class="lean" style="--h:240px;--c:var(--spine4)"></span>"
+                <div class="cup"><i></i></div>
+            </div>
         </section>
         
         <!--About Us Section-->
-        <section id ="about">
+        <section id ="about" class="wrap narrow">
             <h1> About Us</h1>
             <p>Aetheria is a welcoming neighbood sanctuary, this cafe bookstore brings together the love of reading and artisinal coffee, providing solace and cozy atmosphere for community members to unwind, study, and connect.</p>
+            <ul class="chips">
+                <li>Students</li>
+                <li>Avid readers</li>
+                <li>Young professionals</li>
+                <li>Coffee lovers</li>
+            </ul>
         </section>
         
         <!---Highlights Section--->
@@ -43,10 +72,123 @@
             <h3> This allows you to check the menu online, see which books are available, and more!</h1>
         </section>
 
+        <!--Menu--->
+        <section id="menu" class="wrap">
+            <h2>Menu</h2>
+            <div class="filters" role="radiogrouo" aria-label="menu catergories">
+                <label class="pill"><input type="radio" name="cat" id="c-all" checked><span>All</span></label>
+                <label class="pill"><input type="radio" name="cat" id="c-coffee"><span>Hot Drinks</span></label>
+                <label class="pill"><input type="radio" name="cat" id="c-tea"><span>Cold Drinks</span></label>
+                <label class="pill"><input type="radio" name="cat" id="c-pastries"><span>Pastries</span></label>
+            </div>
+            <form class="split" action="#order-thanks">
+                <div class="menu-list">
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
+
+                </div>
+                <aside class="order">
+                    <h3>Pre-order for pickup</h3>
+                    <p>Set the quantity on each item you want then add your name and pickup time!</p>
+                    <label>Your name <input type="text" name="name" required></label>
+                    <label>Pickup time <input type="time" name="pickup" required></label>
+                    <button class="btn" type="submit">Place pre-order</button>
+                    <p id="order-thanks" class="message thanks" role="status">Thanks! Your pre-order has been placed and will be ready at your pickup time.</p>
+
+                </aside>
+    
+            </form>
+        </section>
+        <!--Bookstoree-->
+        <section id="bookstore" class="wrap">
+            <h2>Bookstore</h2>
+            <div class="filters" role="radiogroup" aria-label="Book genres">
+                <label class="pill"><input type="radio" name="genre" id="g-fic"><span>All</span></span></label>
+                <label class="pill"><input type="radio" name="genre" id="g-nonfic"><span>Fiction</span></span></label>
+                <label class="pill"><input type="radio" name="genre" id="g-myst"><span>Classics</span></span></label>
+                <label class="pill"><input type="radio" name="genre" id="g-fic"><span>Non-fiction</span></span></label>
+
+            </div>
+            <div class="books">
+                <article class="book fic"><div class="cover" style="--c:var(--spine1)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine2)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine3)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine4)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine1)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine2)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine3)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine4)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine1)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine2)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+                <article class="book fic"><div class="cover" style="--c:var(--spine3)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+
+            </div>
+        </section>
+           
+        <!--Eventsss-->
+        <section id="events" class="wrap">
+            <h2>Events</h2>
+            <ol class="events">
+                <li><strong>Book Club Meeting:</strong> Join us for our monthly book discussion.</li>
+                <li><strong>Poetry Night:</strong> Share your poetry or enjoy performances by local poets.</li>
+                <li><strong>Study Hour:</strong> Quiet group study with free refills on brewed coffee.</li>
+            </ol>
+        </section>
+
+        <!--reservations-->
+        <section id="reserve" class="wrap">
+            <h2>Reserve a reading nook</h2>
+            <form class="form" action="#reserve-thanks">
+                <label>Name <input type="text" name="name" required></label>
+                <label>Email <input type="email" name="email" required></label>
+                <label>Date <input type="date" name="date" required></label>
+                <label>Time <input type="time" name="time" required></label>
+                <label>Guests <input type="number" name="guests" min="1" max="8" value="2" required></label>
+                <label>Space
+                    <select name="space"><option>Study nook</option><option>Reading corner</option><option>Window table</option><option>Group table</option></select>
+                </label>
+
+                <button class="btn" type="submit">Reserve</button>
+            </form>
+            <p id="reserve-thanks" class="message thanks" role="status">Thanks! Your reservation has been received. We look forward to welcoming you!</p>
+
+        </section>
+
+        <!--Contact us-->
+        <section id="contact" class="wrap">
+            <h2>Contact Us!</h2>
+            <p>Have questions? We'd love to hear from you!</p>
+            <form class="form" action="#contact-thanks">
+                <label>Name <input type="text" name="name" required></label>
+                <label>Email <input type="email" name="email" required></label>
+                <label>Message <textarea name="message" rows="4" required></textarea></label>
+                <button class="btn" type="submit">Send Message</button>
+            </form>
+            <p id="contact-thanks" class="message thanks" role="status">Thanks! Your message has been sent. We'll get back to you soon!</p>
+        </section>
+            <!--<p>Our menu features a variety of artisanal coffee drinks, teas, and light bites to complement your reading experience. From classic espresso to seasonal specialties, there's something for every palate.</p>
+            <ul class="menu-list">
+                <li><strong>Espresso:</strong> A rich and bold shot of coffee.</li>
+                <li><strong>Cappuccino:</strong> Espresso with steamed milk and foam.</li>
+                <li><strong>Latte:</strong> Smooth espresso with steamed milk.</li>
+                <li><strong>Herbal Tea:</strong> A selection of calming herbal blends.</li>
+                <li><strong>Pastries:</strong> Freshly baked croissants, muffins, and more.</li>
+            </ul>
+        -->
+
     </main>
 
-    <footer>
-        <p>Copywrite © 2026 Cyrah Bumanglag</p>
+    <footer class="site-footer">
+        <p>© 2026 Aetheria | BookCafe. Cyrah Bumanglag</p>
     </footer>
 
 </body>
