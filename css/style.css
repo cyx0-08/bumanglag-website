@@ -346,6 +346,62 @@ nav a:hover {
 
 
 /*-----formss------*/
+label {
+    display: block;
+    font-weight: 500;
+    font-size: .95rem;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    margin-top: .3rem;
+    padding: .65rem .8rem;
+    font: inherit;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+
+}
+
+.order form {
+    display: grid;
+    gap: .8rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form .full .form .btn {
+    grid-column: 1 / -1;
+}
+
+.message {
+    margin-top: 1rem;
+    font-weight: 500; 
+    color: var(--accent);
+}
+
+/*------books!--------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 
