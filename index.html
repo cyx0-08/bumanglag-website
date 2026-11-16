@@ -71,65 +71,165 @@
         <section id ="highlights">
             <h3> This allows you to check the menu online, see which books are available, and more!</h1>
         </section>
+<!----->
 
-        <!--Menu--->
+
+        <!---MENU SECTIONN-->
+
         <section id="menu" class="wrap">
-            <h2>Menu</h2>
-            <div class="filters" role="radiogrouo" aria-label="menu catergories">
-                <label class="pill"><input type="radio" name="cat" id="c-all" checked><span>All</span></label>
-                <label class="pill"><input type="radio" name="cat" id="c-coffee"><span>Hot Drinks</span></label>
-                <label class="pill"><input type="radio" name="cat" id="c-tea"><span>Cold Drinks</span></label>
-                <label class="pill"><input type="radio" name="cat" id="c-pastries"><span>Pastries</span></label>
+            <div class="section-heading">
+                <p class="eyebrow">FOR YOU TO INDULGE</p>
+                <h2>Our Menu</h2>
+                <p>Delightful treats and made with love drinks, made for your little moments of comfort.</p>
+
             </div>
-            <form class="split" action="#order-thanks">
-                <div class="menu-list">
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
-                    <article class="item hot"><h3>Espresso</h3><span class="price"></span>₱79</span><p>Espresso with steamed milk.</p><label class="qty">Qty <input type="number" name="latte" min="0" max="10" value="0"></label></article>
 
-                </div>
-                <aside class="order">
-                    <h3>Pre-order for pickup</h3>
-                    <p>Set the quantity on each item you want then add your name and pickup time!</p>
-                    <label>Your name <input type="text" name="name" required></label>
-                    <label>Pickup time <input type="time" name="pickup" required></label>
-                    <button class="btn" type="submit">Place pre-order</button>
-                    <p id="order-thanks" class="message thanks" role="status">Thanks! Your pre-order has been placed and will be ready at your pickup time.</p>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img src="images/espresso.jpg" alt="Espresso">
+                    <div class="menu-info">
+                        <h3>Espresso</h3>
+                        <p>Double short, dark and smooth</p>
+                        <span class="price">₱79</span>
+                    </div>
+                </article>
 
-                </aside>
-    
-            </form>
+                <article class="menu-card">
+                    <img src="images/latte.jpg" alt="Cafe Latte">
+                    <div class="menu-info">
+                        <h3>Cafe Latte</h3>
+                        <p>Rich espresso blended with steamed milk.</p>
+                        <span class="price">₱99</span>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/hojicha.jpg" alt="Hojicha Latte">
+                    <div class="menu-info">
+                        <h3>Hojicha Latte</h3>
+                        <p>Roasted green tea with creamy milk.</p>
+                        <span class="price">₱99</span>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/ice-spanished-latte.jpg" alt="Ice Spanish Latte">
+                    <div class="menu-info">
+                        <h3>Ice Spanish Latte</h3>
+                        <p>Espresso, milk, and sweetened condensed milk.</p>
+                        <span class="price">₱99</span>
+                    </div>
+
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/cold-brew.jpg" alt="Cold Brew">
+                    <div class="menu-info">
+                        <h3>Cold Brew</h3>
+                        <p>Slow-stepped coffee served over ice.</p>
+                        <span class="price">₱99</span>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/matcha-tonic.jpg" alt="Matcha Tonic">
+                    <div class="menu-info">
+                        <h3>Matcha Tonic</h3>
+                        <p>Refreshing matcha with sparkling tonic.</p>
+                        <span class="price">₱99</span>
+                    </div>
+                </article>
+
+        
+
+        <!---Pastries---->
+
+                <article class="menu-card">
+                    <img src="images/croissant.jpg" alt="Butter Croissant">
+                    <div class="menu-info">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery, and freshly baked.</p>
+                        <span class="price">₱149</span>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/ube-pandesal.jpg" alt="Ube Pandesalt">
+                    <div class="menu-info">
+                        <h3>Ube Pandesal</h3>
+                        <p>Soft ube bread.</p>
+                        <span class="price">₱59</span>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/cheesecake.jpg" alt="Burnt Basque Cheesecake">
+                    <div class="menu-info">
+                        <h3>Burnt Basque Cheescake</h3>
+                        <p>Creamy cheesecake with a caramelized top.</p>
+                        <span class="price">₱59</span>
+                    </div>
+                </article>
+
+            </div>
         </section>
-        <!--Bookstoree-->
-        <section id="bookstore" class="wrap">
-            <h2>Bookstore</h2>
-            <div class="filters" role="radiogroup" aria-label="Book genres">
-                <label class="pill"><input type="radio" name="genre" id="g-fic"><span>All</span></span></label>
-                <label class="pill"><input type="radio" name="genre" id="g-nonfic"><span>Fiction</span></span></label>
-                <label class="pill"><input type="radio" name="genre" id="g-myst"><span>Classics</span></span></label>
-                <label class="pill"><input type="radio" name="genre" id="g-fic"><span>Non-fiction</span></span></label>
 
+
+        <!--Bookstoreee sectionn-->
+        <section id="bookstore" class="wrap">
+           
+           <div class="section-heading">
+                <p class="eyebrow">IN BETWEEN PAGES</p>
+                <p>Discover stories, ideas, and adventures waiting to be explored.</p>
             </div>
-            <div class="books">
-                <article class="book fic"><div class="cover" style="--c:var(--spine1)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine2)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine3)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine4)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine1)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine2)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine3)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine4)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine1)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine2)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
-                <article class="book fic"><div class="cover" style="--c:var(--spine3)">The Midnight Library</div><div class="info"><h3>The Midnight Library</h3><p>by Matt Haig - Fiction </p><span class="stock in">In Stock</span></div></article>
+
+
+            <div class="book-grid">
+               
+                <article class="book-card">
+                    <img src="images/notevenbones.jpg" alt="Not Even Bones">
+                    <div class="book-info">
+                        <h3>Not Even Bones</h3>
+                        <p>Rebecca Schaeffer</p>
+                        <span class="genre">Thriller</span>
+                    </div>
+                </article>
+
+            <article class="book-card">
+                    <img src="images/everything-i-never.jpg" alt="Everything I Never Told You">
+                    <div class="book-info">
+                        <h3>Everything I Never Told You</h3>
+                        <p>Celeste Ng</p>
+                        <span class="genre">Drama</span>
+                    </div>
+                </article>
+
+                 <article class="book-card">
+                    <img src="images/school-good-evil.jpg" alt="The School for Good and Evil">
+                    <div class="book-info">
+                        <h3>The School for Good and Evil</h3>
+                        <p>Soman Chainani</p>
+                        <span class="genre">Fantasy</span>
+                    </div>
+                </article>
+
+                 <article class="book-card">
+                    <img src="images/dead-poet.jpg" alt="Dead Poet Society">
+                    <div class="book-info">
+                        <h3>Dead Poet Society</h3>
+                        <p>N.H. Kleinbaum</p>
+                        <span class="genre">Fiction</span>
+                    </div>
+                </article>
+
+                 <article class="book-card">
+                    <img src="images/fine-print.jpg" alt="The Fine Print">
+                    <div class="book-info">
+                        <h3>The Fine Print</h3>
+                        <p>Lauren Asher</p>
+                        <span class="genre">Romance</span>
+                    </div>
+                </article>
 
             </div>
         </section>
