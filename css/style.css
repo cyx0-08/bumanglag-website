@@ -57,13 +57,20 @@ img {
 }
 
 .site-header {
-    position: sticky; top: 0; z-index: 10;
-    display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
-    padding: .8rem 5vw; background: var(--bg); border-bottom: 1px solid var(--line);
+    position: sticky; 
+    top: 0; 
+    z-index: 10;
+    display: flex; 
+    align-items: center; 
+    gap: 1.5rem; flex-wrap: wrap;
+    padding: .8rem 5vw; 
+    background: var(--bg-color); 
+    border-bottom: 1px solid var(--line);
 
 }
 
 .logo {
+    font-family: "Fraunces", serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--ink); 
@@ -83,10 +90,12 @@ nav a {
     color: var(--ink);
     text-decoration: none;
     padding: .2rem 0;
-    border-bottom: 2px solid transparent
+    border-bottom: 2px solid transparent;
+    transition: .3s ease;
 }
 
 nav a:hover {
+    color: var(--muted);
     border-color: var(--accent); 
 }
 
@@ -104,15 +113,21 @@ nav a:hover {
     border: 2px solid var(--accent);
     background: var(--accent);
     color: var(--accent-ink);
+    transition: .3s ease;
 }
 
 .btn:hover {
-    filter: brightness(1.08);
+    filter: brightness(1.1);
+    transform: translateY(-2px);
 }
 
 .btn.ghost {
     background: transparent;
     color: var(--ink);
+}
+
+.btn.ghost:hover {
+    background: var(--surface);
 }
 
 .actions {
@@ -139,6 +154,11 @@ nav a:hover {
     padding-bottom: 4rem;
 }
 
+.hero-text p {
+    color: var(--muted);
+    max-width: 550px;
+}
+
 /*
 .hero-text {
   position: relative;
@@ -162,7 +182,7 @@ nav a:hover {
     align-items: flex-end;
     gap: 6px;
     padding: 0 1.2rem;
-    border-bottom: 14px solid var(--ink); 
+    border-bottom: 14px solid var(--accent); 
     min-height: 300px;
 }
 
@@ -171,8 +191,7 @@ nav a:hover {
     height: var(--h);
     background: var(--c);
     border-radius: 4px 4px 0 0;
-    box-shadow: insent -6px 0 0 rgba (0,0,0,.12), inset 0 14px 0 rgba(0,0,0,0)
-
+    box-shadow: insent -6px 0 0 rgba (0,0,0,.12);
 }
 
 .shelf .lean {
@@ -241,20 +260,23 @@ nav a:hover {
     max-width: 760px;
 }
 
-.chips {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .6rem;
-    padding: 0;
-    margin-top: 1.5rems
+
+.section-heading {
+    margin-bottom: 2rem;
 }
 
-.chips li {
-    padding: .35rem .9rem;
-    border: 1.5px solid var(--accent);
-    border-radius: 999px;
+
+.section-heading h2 {
+    margin-bottom: .5rem;
 }
+
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    max-width: 600px;
+}
+
+
 
 .filters {
     display: flex;
