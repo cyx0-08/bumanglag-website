@@ -20,7 +20,7 @@
 * {box-sizing: border-box;}
 html {
     scroll-behavior: smooth; 
-    scroll-padding-top: 80px;
+    scroll-padding-top: 40px;
 }
 
 
@@ -159,6 +159,8 @@ nav a:hover {
     max-width: 550px;
 }
 
+
+
 /*
 .hero-text {
   position: relative;
@@ -176,63 +178,6 @@ nav a:hover {
 */
 
 
-.shelf {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    gap: 6px;
-    padding: 0 1.2rem;
-    border-bottom: 14px solid var(--accent); 
-    min-height: 300px;
-}
-
-.shelf span {
-    width: 38px;
-    height: var(--h);
-    background: var(--c);
-    border-radius: 4px 4px 0 0;
-    box-shadow: insent -6px 0 0 rgba (0,0,0,.12);
-}
-
-.shelf .lean {
-    transform: rotate(9deg);
-    transform-origin: bottom left;
-    margin-left: 8px;
-}
-
-.cup {
-    position: relative;
-    width: 70px;
-    height: 56px;
-    margin-left: 18px;
-    background: var(--surface);
-    border: 3px solid var(--ink);
-    border-radius: 0 0 30px 30px;
-}
-
-.cup::after {
-    content: "";
-    position: aboslute;
-    right: -22px;
-    top: 8px;
-    width: 22px;
-    height: 24px;
-    border: 3px solid var(--ink); 
-    border-left: 0;
-    border-radius: 0 14px 14px 0;
-}
-
-.cup i {
-    position: abosulte;
-    left: 50%;
-    top: -34px;
-    width: 8px;
-    height: 26px;
-    border-radius: 8px;
-    background: var(--muted);
-    opacity: .5;
-    animation: steam 3.2s ease-in-out infinite;
-}
 
 @keyframes steam {
     0%, 100%
@@ -328,10 +273,20 @@ nav a:hover {
 }
 
 .menu-info {
-    
+    padding: 1rem;   
+}
+
+.menu-info h3 {
+    font-size: 1.15rem;
+    margin: 0 0 .4rem;
 }
 
 
+.menu-info p {
+    color: var(--ink);
+    font-size: 9rem;
+    margin: 
+}
 
 .filters {
     display: flex;
@@ -473,10 +428,15 @@ input, select, textarea {
     border-radius: 8px;
 
 }
+input::placeholder, textarea::placeholder {
+    color: var(--ink);
+    opacity: .7;
 
-.order form {
-    display: grid;
-    gap: .8rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .form {
@@ -485,14 +445,19 @@ input, select, textarea {
     gap: 1rem;
 }
 
-.form .full .form .btn {
+.form .full {
     grid-column: 1 / -1;
+}
+
+.form .btn {
+    grid-column: 1 / -1;
+    justify-self: start;
 }
 
 .message {
     margin-top: 1rem;
     font-weight: 500; 
-    color: var(--accent);
+    color: var(--muted);
 }
 
 /*------books!--------*/
@@ -558,6 +523,9 @@ input, select, textarea {
 } */
 
 
+
+
+
 /*-----events-----*/
 
 .events {
@@ -599,8 +567,385 @@ input, select, textarea {
     color: var(--muted);
 }
 
+
+.event, .info-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.4rem;
+}
+
+.event h3, .info-card h3 {
+    margin-top: 0;
+}
+
+.event p, .info-card p {
+    color: var(--ink);
+}
+
+
+
 /*-----response part-------*/
 
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 4rem;
+    }
+
+    .hero-text {
+        padding-bottom: 1rem;
+    }
+
+    .shelf {
+        max-width: 450px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        margin-left: 0;
+        width: 100%;
+        gap: .8rem;
+    }
+
+    .hero {
+        padding-top: 3rem;
+    }
+
+    .wrap {
+        padding: 3.5rem 5vw;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .menu-card img {
+        height: 210px;
+    }
+
+    .book-card img {
+        height: 190px;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .form .full,
+    .form .btn {
+        grid-column: 1;
+    }
+}
+
+
+/*-------fooooterrr-------*/
+footer {
+    padding: 2rem 5vw;
+    text-align: center;
+    background: var(--bg-color);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+
+}
+
+footer a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ----- MENU CAROUSEL ----- */
+
+.menu-grid {
+    display: flex;
+    gap: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 10px 5px 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-color);
+}
+
+.menu-card {
+    flex: 0 0 calc((100% - 2rem) / 3);
+    min-width: 0;
+
+    scroll-snap-align: start;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-info {
+    padding: 1rem;
+}
+
+.menu-info h3 {
+    margin: 0 0 .5rem;
+    font-size: 1.15rem;
+}
+
+.menu-info p {
+    font-size: .9rem;
+    margin: 0 0 .8rem;
+    color: var(--ink);
+    min-height: 48px;
+}
+
+.menu-info .price {
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ----- BOOKSTORE CAROUSEL ----- */
+
+.book-grid {
+    display: flex;
+    gap: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 10px 5px 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-color);
+}
+
+.book-card {
+    flex: 0 0 calc((100% - 2rem) / 3);
+    min-width: 0;
+
+    scroll-snap-align: start;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+
+.book-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    padding: 12px;
+    background: var(--ink);
+}
+
+.book-info {
+    padding: 1rem;
+}
+
+.book-info h3 {
+    font-size: 1.05rem;
+    margin: 0 0 .4rem;
+}
+
+.book-info p {
+    font-size: .9rem;
+    margin: 0 0 .7rem;
+    color: var(--ink);
+}
+
+.genre {
+    display: inline-block;
+    padding: .25rem .7rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: .8rem;
+}
+
+/* ----- CAROUSEL SCROLLBAR ----- */
+
+.menu-grid::-webkit-scrollbar,
+.book-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.menu-grid::-webkit-scrollbar-track,
+.book-grid::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+
+.menu-grid::-webkit-scrollbar-thumb,
+.book-grid::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+/* FULL-WIDTH HERO BACKGROUND */
+
+.hero {
+    width: 100vw;
+    max-width: none;
+    min-height: 85vh;
+
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 54, 26, 0.35),
+            rgba(35, 54, 26, 0.55)
+        ),
+        url("../images/backgroundd1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO AND HOVER TITLE */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+
+    transition: all .3s ease;
+}
+
+.logo-name small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+/* Show title when logo is hovered */
+.logo:hover .logo-name,
+.logo:focus-visible .logo-name {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Slight logo animation */
+.logo:hover img {
+    transform: scale(1.08);
+}
+/*
+
+.nav-header {
+    background-color: #104F3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-parent {
+    display: flex;
+    align-items:baseline;
+    gap: 16px;
+}
+
+.logo-child {
+    display: flex;
+    align-items: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    text-decoration: underline;
+    color: #7b4635;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+*/
+
+/*
 @media (max-width: 800px) {
     .hero, .split {
         grid-template-columns: 1fr;
@@ -635,39 +980,3 @@ input, select, textarea {
         animation: none;
     }
 }
-
-
-
-
-
-
-/*
-
-.nav-header {
-    background-color: #104F3E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 40px;
-    gap: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-parent {
-    display: flex;
-    align-items:baseline;
-    gap: 16px;
-}
-
-.logo-child {
-    display: flex;
-    align-items: center;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    text-decoration: underline;
-    color: #7b4635;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-*/
