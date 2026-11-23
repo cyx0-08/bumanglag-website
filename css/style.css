@@ -69,15 +69,6 @@ img {
 
 }
 
-.logo {
-    font-family: "Fraunces", serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--ink); 
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-}
 
 nav {
     display: flex;
@@ -367,6 +358,7 @@ nav a:hover {
     
 }
 
+/*
 .order {
     position: sticky;
     top: 90px;
@@ -406,7 +398,7 @@ nav a:hover {
 .total {
     margin: .4rem 0 1rem;
 }
-
+*/
 
 
 /*-----formss------*/
@@ -692,6 +684,7 @@ img {
     overflow-x: auto;
     overflow-y: hidden;
 
+
     padding: 10px 5px 20px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -815,7 +808,7 @@ img {
     font-size: .8rem;
 }
 
-/* ----- CAROUSEL SCROLLBAR ----- */
+/* ----- carousel scrollbarrr ----- */
 
 .menu-grid::-webkit-scrollbar,
 .book-grid::-webkit-scrollbar {
@@ -834,7 +827,7 @@ img {
     border-radius: 10px;
 }
 
-/* FULL-WIDTH HERO BACKGROUND */
+/*-----occupy tanan background------*/
 
 .hero {
     width: 100vw;
@@ -859,7 +852,7 @@ img {
     align-items: center;
 }
 
-/* LOGO AND HOVER TITLE */
+/* -------LOGO AND HOVER TITLE--------- */
 
 .header-logo {
     display: flex;
@@ -902,7 +895,7 @@ img {
     letter-spacing: 3px;
 }
 
-/* Show title when logo is hovered */
+/* ----s how title when logo is hovered----*/
 .logo:hover .logo-name,
 .logo:focus-visible .logo-name {
     opacity: 1;
@@ -910,7 +903,7 @@ img {
     transform: translateX(0);
 }
 
-/* Slight logo animation */
+/*----slight logo animation */
 .logo:hover img {
     transform: scale(1.08);
 }
